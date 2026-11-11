@@ -1,10 +1,10 @@
 {
   "presentation": {
-    "title": "README to Slides",
-    "subtitle": "Documenta una vez. Explica, demuestra y presenta directamente desde Markdown.",
-    "eyebrow": "OPEN SOURCE · MARKDOWN PRESENTATIONS",
+    "title": "Mi Primera Red Neuronal",
+    "subtitle": "De matrices y derivadas a un clasificador de dibujos con cámara.",
+    "eyebrow": "TALLER PRÁCTICO · PYTHON · INTELIGENCIA ARTIFICIAL",
     "titleFromRepository": false,
-    "repositoryUrl": null
+    "repositoryUrl": "https://github.com/jorgektch/tu-primera-red-neuronal"
   },
   "presenter": {
     "name": "Jorge Jesús Quispe Villaverde",

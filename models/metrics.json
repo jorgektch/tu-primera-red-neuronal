@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "epochs": 45,
+  "learning_rate": 0.25,
+  "batch_size": 64,
+  "best_val_loss": 0.0021958607248961926,
+  "test_loss": 0.0006651260773651302,
+  "test_accuracy": 1.0,
+  "test_n": 320
+}

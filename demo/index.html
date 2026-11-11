@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0B1020">
+<title>Laboratorio de caritas · Mi Primera Red Neuronal</title>
+<meta name="description" content="Clasifica dibujos de caritas felices y tristes usando un MLP entrenado desde cero con NumPy.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<main class="app">
+  <header class="top"><div><p class="eyebrow">LABORATORIO · MLP NUMPY</p><h1>Mi Primera Red Neuronal</h1><p class="muted">Dibuja una carita feliz o triste en papel y muéstrala a la cámara. El modelo fue entrenado con imágenes sintéticas del repositorio.</p></div><a href="../" class="outline">← Volver a las diapositivas</a></header>
+  <div id="model-status" class="status" role="status">Cargando pesos del modelo…</div>
+  <div class="tabs" role="tablist" aria-label="Fuente del dibujo">
+    <button id="tab-camera" class="tab active" data-tab="camera" aria-selected="true" role="tab">📷 Cámara</button>
+    <button id="tab-upload" class="tab" data-tab="upload" aria-selected="false" role="tab">🖼️ Subir imagen</button>
+    <button id="tab-draw" class="tab" data-tab="draw" aria-selected="false" role="tab">✏️ Dibujar aquí</button>
+  </div>
+  <div class="workspace">
+    <section class="input-panel">
+      <div id="panel-camera" class="source-panel">
+        <div class="camera-frame"><video id="camera" autoplay playsinline muted></video><div class="camera-guide" aria-hidden="true"></div></div>
+        <div class="buttons"><button id="start-camera">Activar cámara</button><button id="capture" disabled>Capturar y clasificar</button><button id="stop-camera" class="outline" disabled>Detener</button></div>
+        <p class="muted small">Centra el dibujo completo dentro del recuadro. Usa papel blanco, trazo oscuro y buena iluminación. La cámara requiere HTTPS o localhost.</p>
+      </div>
+      <div id="panel-upload" class="source-panel" hidden><label class="upload-zone" for="upload">Seleccionar una foto de una carita dibujada<input id="upload" type="file" accept="image/png,image/jpeg,image/webp,image/*"></label><canvas id="uploaded-preview" class="upload-preview" width="96" height="96" aria-label="Vista previa de imagen"></canvas></div>
+      <div id="panel-draw" class="source-panel" hidden><p class="muted small">Traza un círculo, dos ojos y una boca. Usa mouse o dedo.</p><canvas id="draw-pad" width="384" height="384" aria-label="Área de dibujo de carita"></canvas><div class="buttons"><button id="classify-draw">Clasificar dibujo</button><button id="clear-draw" class="outline">Limpiar</button></div></div>
+    </section>
+    <section class="result-panel" aria-live="polite">
+      <p class="eyebrow">SALIDA DEL MODELO</p><div id="emoji" class="result-emoji">🧠</div><h2 id="prediction">Modelo preparado para clasificar</h2><p id="confidence" class="muted">Se mostrará la puntuación de la red.</p>
+      <div class="meter"><div id="probability-bar" class="meter-progress"></div></div>
+      <div class="meter-labels"><span>Triste (0)</span><span>Feliz (1)</span></div>
+      <p class="eyebrow preview-label">LO QUE VE LA RED: 28 × 28</p><canvas id="normalized-preview" width="280" height="280" aria-label="Preprocesamiento de imagen a 28 por 28"></canvas>
+      <p class="muted small">Este número es una salida del clasificador, no una probabilidad calibrada ni una lectura de emociones humanas. Si aparece «incierto», prueba otro dibujo.</p>
+    </section>
+  </div>
+  <footer><a href="https://github.com/jorgektch/tu-primera-red-neuronal" target="_blank" rel="noopener">Código, dataset y referencias</a> · Taller por Jorge Jesús Quispe Villaverde · Todo se procesa localmente en este navegador.</footer>
+</main>
+<script type="module" src="app.mjs"></script>
+</body></html>

@@ -1,4 +1,4 @@
-name: Validate Markdown presentation template
+name: Validate Neural Network Workshop and Presentation
 
 on:
   push:
@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install workshop Python dependencies
+        run: python -m pip install 'numpy>=1.26,<3' 'Pillow>=10,<13'
       - name: Run JavaScript unit tests
         run: node --test tests/*.test.mjs
       - name: Validate any customized README, config and local assets
@@ -23,6 +25,10 @@ jobs:
           python tests/check_deck.py
           python tests/test_quality_checker.py
           python -m unittest discover -s tests -p test_engine_update.py
+      - name: Verify dataset, MLP, gradients and workshop content
+        run: |
+          python -m unittest discover -s tests -p test_workshop.py -v
+          python tests/check_workshop.py
 
   browser:
     runs-on: ubuntu-latest

@@ -7,3 +7,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/

@@ -1,0 +1,19 @@
+{
+  "test_accuracy": 1.0,
+  "test_loss": 0.0006651260773651302,
+  "confusion_matrix_rows_true_cols_pred": [
+    [
+      160,
+      0
+    ],
+    [
+      0,
+      160
+    ]
+  ],
+  "n": 320,
+  "class_names": [
+    "triste",
+    "feliz"
+  ]
+}

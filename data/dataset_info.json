@@ -1,0 +1,24 @@
+{
+  "name": "Dibujos sintéticos de caritas felices y tristes",
+  "creator": "Generados para este taller con src/generate_dataset.py y Pillow",
+  "seed": 2026,
+  "counts_per_class": {
+    "train": 900,
+    "val": 160,
+    "test": 160
+  },
+  "classes": {
+    "0": "triste",
+    "1": "feliz"
+  },
+  "image_size_original": [
+    96,
+    96
+  ],
+  "model_input_size": [
+    28,
+    28
+  ],
+  "preprocessing": "ver src/preprocess.py y demo/preprocess.js",
+  "limitations": "Dataset sintético; no representa fotografías de rostros reales ni asegura precisión con dibujos sobre papel."
+}
