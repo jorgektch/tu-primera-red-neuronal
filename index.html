@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Plantilla para convertir un README de GitHub en diapositivas web interactivas con Reveal.js, Mermaid y GitHub Pages.">
+  <title>README to Slides · Interactive Markdown presentations</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Lexend:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+  <div class="reveal"><div class="slides">
+    <section data-deck-source="readme" data-markdown="README.md"
+             data-separator="^\r?\n---\r?\n$"
+             data-separator-vertical="^\r?\n--\r?\n$"
+             data-separator-notes="^Note:"></section>
+  </div></div>
+  <div id="deck-counter" class="deck-counter" aria-label="Número de diapositiva" aria-live="off">1 / 1</div>
+  <nav id="deck-navigation" class="deck-navigation" role="toolbar" aria-label="Navegación y enlaces de la presentación">
+    <button type="button" id="nav-first" title="Primera diapositiva (Inicio)" aria-label="Ir al inicio">
+      <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-prev" title="Anterior" aria-label="Diapositiva anterior">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-up" title="Diapositiva vertical anterior (Arriba)" aria-label="Subir en el bloque vertical">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-down" title="Diapositiva vertical siguiente (Abajo)" aria-label="Bajar en el bloque vertical">
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-next" title="Siguiente" aria-label="Diapositiva siguiente">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-last" title="Última diapositiva (Fin)" aria-label="Ir al final">
+      <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+    </button>
+    <span class="deck-nav-divider" aria-hidden="true"></span>
+    <button type="button" id="nav-overview" title="Mostrar/ocultar vista general (Esc u O)" aria-label="Alternar vista general" aria-pressed="false">
+      <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+    </button>
+    <button type="button" id="nav-theme" title="Tema oscuro · cambiar a claro" aria-label="Cambiar tema de color">
+      <i class="fa-solid fa-moon" aria-hidden="true"></i>
+    </button>
+    <a id="nav-repository" class="deck-repo-link" hidden target="_blank" rel="noopener noreferrer" title="Abrir el repositorio en GitHub" aria-label="Abrir repositorio de GitHub">
+      <i class="fa-brands fa-github" aria-hidden="true"></i><span>Repo</span>
+    </a>
+  </nav>
+  <!-- On touch devices, this compact button reveals the otherwise hidden toolbar. -->
+  <button type="button" id="nav-reveal-trigger" class="nav-reveal-trigger" hidden
+          aria-controls="deck-navigation" aria-expanded="false"
+          aria-label="Mostrar controles de navegación" title="Mostrar controles de navegación">
+    <span aria-hidden="true">⋯</span>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script type="module" src="assets/js/app.mjs"></script>
+</body>
+</html>

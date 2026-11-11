@@ -1,0 +1,75 @@
+{
+  "presentation": {
+    "title": "README to Slides",
+    "subtitle": "Documenta una vez. Explica, demuestra y presenta directamente desde Markdown.",
+    "eyebrow": "OPEN SOURCE · MARKDOWN PRESENTATIONS",
+    "titleFromRepository": false,
+    "repositoryUrl": null
+  },
+  "presenter": {
+    "name": "Jorge Jesús Quispe Villaverde",
+    "role": "AI Engineer · Applied AI Researcher · AI Mentor",
+    "email": "jorgektch@gmail.com",
+    "handle": "/jorgektch",
+    "social": {
+      "github": "https://github.com/jorgektch",
+      "instagram": "https://www.instagram.com/jorgektch",
+      "tiktok": "https://www.tiktok.com/@jorgektch"
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "showToggle": true,
+    "colors": {
+      "background": "#0B1020",
+      "panel": "#10182A",
+      "heading": "#F5F7FF",
+      "accent": "#36E0C4",
+      "text": "#AAB9D0",
+      "muted": "#8799B2",
+      "border": "#30435B"
+    },
+    "lightColors": {
+      "background": "#F7FAFC",
+      "panel": "#FFFFFF",
+      "heading": "#172334",
+      "accent": "#007C70",
+      "text": "#344054",
+      "muted": "#667085",
+      "border": "#CBD5E1"
+    },
+    "fonts": {
+      "heading": "Poppins",
+      "body": "Lexend",
+      "code": "JetBrains Mono"
+    }
+  },
+  "slides": {
+    "markdown": "README.md",
+    "width": 1280,
+    "height": 720,
+    "margin": 0.06,
+    "transition": "fade",
+    "transitionSpeed": "default",
+    "autoSlideMs": 0,
+    "autoSlideStoppable": true,
+    "loop": false,
+    "center": true,
+    "showCounter": true,
+    "showNavigation": true,
+    "navigationVisibility": "auto",
+    "navigationHideDelayMs": 3000,
+    "navigationRevealZonePx": 90,
+    "showRepositoryLink": true,
+    "allowRemoteReadme": true,
+    "autoFitContent": true,
+    "fitSafeGapPx": 18
+  },
+  "media": {
+    "embedVideoLinks": true,
+    "autoplay": false,
+    "lazyLoad": true,
+    "videoMaxWidthPx": 640,
+    "videoMaxHeightPx": 350
+  }
+}

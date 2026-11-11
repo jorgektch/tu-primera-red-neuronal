@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "engine": "readme-to-slides",
+  "upstreamRepository": "jorgektch/readme-to-slides",
+  "version": "1.5.1",
+  "configurationSchema": 1,
+  "requiresManualMigration": false,
+  "managedFiles": {
+    "assets/js/app.mjs": "146adca5e9f44c6b357a5eb11cd7f03cccf6159da230acd65ed6d08e9e1519eb",
+    "assets/js/config.mjs": "ebefd207e0e21d2beafbd5af32f21ecc664f77c68ccdfa12b52ef70b5ace4cc1",
+    "assets/js/fit.mjs": "95921354f1eea0d59260f040439540316e228d1bd84e5f7212ed71714aaf3c27",
+    "assets/js/media.mjs": "b3174548fa4c55aa408d107895fc7e00785b1a835f0c7d530503fa88a01c3a3e",
+    "assets/js/navigation.mjs": "8f9a78ce36d736a1eb5a86851c9af91f8e1ee8c6f2a8bba7d573fc3e3d084b7e",
+    "assets/js/remote-assets.mjs": "6565f1c03cf1d4e08086d13ee5f6c66e48fc5e55dbd3cdf96190dc1182ce4aa8",
+    "assets/js/theme.mjs": "c6fa06a020dcc8a776ad7ef2aa1a51c0bef6f531eeca5143f9f177f931ebfcf4",
+    "assets/theme.css": "78379d1f4babe401612903c5c51021c13b5310b35da3c63d8a02f684f30fc679"
+  }
+}

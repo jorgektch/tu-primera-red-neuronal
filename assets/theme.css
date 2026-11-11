@@ -1,0 +1,531 @@
+/* Identidad visual (referencia): fondo #0B1020 · titulo #F5F7FF · acento #36E0C4 · texto #AAB9D0.
+   Fuentes elegidas por el expositor: Poppins, Lexend y JetBrains Mono. */
+:root {
+  --bg: #0B1020;
+  --panel: #10182A;
+  --panel-2: #151F31;
+  --heading: #F5F7FF;
+  --accent: #36E0C4;
+  --body: #AAB9D0;
+  --muted: #8799B2;
+  --line: #30435B;
+  --r-background-color: var(--bg);
+  --r-main-color: var(--body);
+  --r-heading-color: var(--heading);
+  --r-link-color: var(--accent);
+  --r-link-color-hover: #9DF8E8;
+  --r-selection-background-color: var(--accent);
+  --r-selection-color: var(--bg);
+  --r-main-font: "Lexend", Arial, sans-serif;
+  --r-heading-font: "Poppins", Arial, sans-serif;
+  --r-code-font: "JetBrains Mono", Consolas, monospace;
+  --r-main-font-size: 27px;
+  --r-heading-text-transform: none;
+  --r-heading-font-weight: 600;
+  --r-heading-letter-spacing: -0.025em;
+  --r-block-margin: 14px;
+}
+.reveal {background:radial-gradient(ellipse at 88% 12%,#13273c 0,transparent 46%),var(--bg);font-weight:400}
+.reveal .slides section {text-align:left}
+.reveal h1,.reveal h2,.reveal h3 {color:var(--heading);line-height:1.16}
+.reveal h1{font-size:2.25em}.reveal h2{font-size:1.55em;margin-bottom:.46em}.reveal h3{font-size:1.02em}
+.reveal strong{color:var(--heading);font-weight:600}
+.reveal p,.reveal li{line-height:1.48}.reveal p{margin:.48em 0}
+.reveal ul,.reveal ol {margin-left:1.0em;display:block}.reveal li{margin:.26em 0}
+.reveal a{color:var(--accent);text-underline-offset:5px}.reveal small{font-size:.5em;color:var(--muted)}
+.reveal blockquote{background:var(--panel);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 24px;width:90%;box-shadow:none}
+.reveal section.cover{background:transparent!important;padding:0}
+.reveal section.cover .cover-card{background:#0B1020;border:1px solid #23324D;border-radius:24px;box-shadow:0 28px 80px #0007;max-width:1060px;margin:0 auto;padding:48px 56px;text-align:left}
+.reveal .cover-kicker,.reveal .cover-card .cover-kicker{font-family:"Poppins",sans-serif;font-size:16px;line-height:1.2;color:var(--accent);font-weight:600;letter-spacing:.035em;margin:0 0 20px}
+.reveal .cover-title,.reveal section.cover .cover-title{font-family:"Poppins",sans-serif;font-weight:700;font-size:60px;line-height:1.1;letter-spacing:-.03em;margin:0 0 16px;color:var(--heading)}
+.reveal .cover-description{font-family:"Lexend",sans-serif;color:var(--body);font-size:25px;line-height:1.5;margin:0;max-width:880px}
+.reveal .cover-separator{height:1px;background:var(--line);margin:28px 0 25px}
+.reveal .cover-author{font-family:"Poppins",sans-serif;font-weight:600;color:var(--heading);font-size:23px;margin:0 0 14px}
+.reveal .cover-role{color:var(--body);font-size:19px;line-height:1.4;margin:0 0 26px}
+/* Contacto en caratula y cierre: email a la izquierda, tres iconos y un unico usuario a la derecha. */
+.reveal .contact-row {
+  --contact-text-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  width: 100%;
+  margin-top: 20px;
+}
+.reveal .contact-email {
+  font: 500 var(--contact-text-size) "Lexend", sans-serif;
+  color: var(--heading);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.reveal .contact-email:hover { color: var(--accent); }
+.reveal .contact-socials {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 13px;
+  white-space: nowrap;
+}
+.reveal .contact-socials .social-icon {
+  display: inline-flex;
+  width: 28px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.reveal .contact-socials .social-icon:hover { background: var(--panel-2); }
+/* Font Awesome is included by index.html; in the GitHub README the links
+   retain their readable fallback labels, which are hidden only in the deck. */
+.reveal .contact-socials .social-icon i {
+  color: var(--accent);
+  font-family: "Font Awesome 6 Brands";
+  font-size: 23px;
+  font-style: normal;
+  line-height: 1;
+}
+.reveal .contact-socials .social-label { display: none; }
+.reveal .social-handle {
+  color: var(--heading);
+  font: 500 var(--contact-text-size) "Lexend", sans-serif;
+  margin-left: 2px;
+}
+@media screen and (max-width: 760px) {
+  .reveal .contact-row { --contact-text-size: 15px; align-items: flex-start; }
+}
+
+/* En la vista de slides se omite el enlace al propio visor debajo de la caratula. En GitHub sigue visible. */
+.reveal section.cover>.cover-card+p {display:none}
+.reveal section.closing .closing-card{max-width:1000px;border:1px solid var(--line);border-radius:24px;margin:auto;padding:48px 55px;background:var(--bg)}
+.reveal section.closing h1{font-size:2.4em;margin:.25em 0 .6em}
+.reveal .closing-question{color:var(--accent);font-weight:600;margin-top:24px}
+.reveal table{width:100%;font-family:"Lexend",sans-serif;font-size:.69em;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:12px}
+.reveal table th{color:var(--accent);background:var(--panel-2);border-bottom:1px solid var(--line);font-weight:600;padding:11px 15px}
+.reveal table td{color:var(--body);border-bottom:1px solid var(--line);padding:10px 15px}
+.reveal table tbody tr:last-child td{border-bottom:0}.reveal table tr:nth-child(even){background:#131d2e}
+.reveal pre{width:100%;box-shadow:none;margin:.40em 0}
+.reveal pre code,.reveal code{font-family:"JetBrains Mono",Consolas,monospace!important;font-variant-ligatures:none}
+.reveal pre code{display:block;color:#ECF5FA;background:#0A1320;font-size:.68em;line-height:1.35;border:1px solid var(--line);border-radius:10px;max-height:395px;padding:15px 18px}
+.reveal code:not(pre code){background:#1B283A;color:#ACEFE2;font-size:.84em;border-radius:5px;padding:.1em .22em}
+.reveal img:not(.contact-socials img){border:1px solid var(--line);border-radius:14px;max-width:100%;max-height:350px;object-fit:cover;box-shadow:0 13px 40px #0005}
+.reveal .image-text{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:35px;width:100%}
+.reveal .image-text img{width:100%;height:315px;max-height:315px;object-fit:cover}.reveal .image-side small{display:block;text-align:right;margin-top:8px}.reveal .text-side h3{color:var(--accent)}
+.reveal .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:1em 0}
+.reveal .feature-card{background:linear-gradient(160deg,#15243A,#0D1628);border:1px solid var(--line);border-radius:15px;padding:20px;min-height:220px}
+.reveal .feature-card h3{font-size:.89em;color:var(--heading);margin:.35em 0}.reveal .feature-card p{font-size:.62em;line-height:1.48}
+.reveal .card-kicker{font:500 .44em "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.11em}
+/* Mermaid: se agregan SVG ya validados en JavaScript; ante error queda visible el codigo para diagnosticar. */
+.reveal .diagram-panel{background:#0A1421;border:1px solid var(--line);border-radius:16px;padding:16px 18px;min-height:270px;width:100%;display:flex;align-items:center;justify-content:center;box-sizing:border-box;margin:8px auto 15px;overflow:hidden}
+.reveal .diagram-panel svg{display:block;width:100%!important;max-width:1130px!important;max-height:405px;height:auto!important;overflow:visible}
+.reveal .diagram-panel svg .label,.reveal .diagram-panel svg text{font-family:"Lexend",sans-serif!important}
+.reveal .diagram-error{text-align:left;width:100%;font-size:16px;color:var(--body);max-height:380px;overflow:auto}
+.reveal .diagram-error h4{color:var(--accent);font-size:19px;margin:0 0 10px}.reveal .diagram-error pre{white-space:pre-wrap;font-size:13px;line-height:1.45}
+/* Desactivar el contador propio, que se superponía con las flechas. */
+.reveal .slide-number{display:none!important}
+.deck-counter{position:fixed;z-index:120;bottom:18px;left:26px;padding:5px 10px;border:1px solid #30435B;border-radius:8px;background:#0B1020d9;color:#AAB9D0;font:500 14px "JetBrains Mono",Consolas,monospace;pointer-events:none;user-select:none}
+.reveal .controls{right:20px!important;bottom:20px!important}
+@media print {.deck-counter{display:none!important}}
+.reveal .progress{color:var(--accent)}.reveal .progress span{background:var(--accent)}
+@media screen and (max-width:700px){:root{--r-main-font-size:24px}.reveal section.cover .cover-card{padding:28px}.reveal section.cover .cover-title{font-size:42px}}
+
+/* Los diagramas son SVG reales, no el código resaltado por RevealHighlight. */
+.reveal .diagram-panel svg{max-width:100%!important;width:100%!important;height:auto!important;max-height:385px!important}
+.reveal .diagram-panel .diagram-error{font-size:16px}
+
+/* v6: carátula y cierre tienen el mismo lienzo y el contacto anclado al mismo punto. */
+.reveal .slides section.cover .cover-card,
+.reveal .slides section.closing .closing-card {
+  box-sizing: border-box;
+  width: 1060px;
+  max-width: 100%;
+  height: 492px;
+  margin: 0 auto;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: #0B1020;
+  border: 1px solid #23324D;
+  border-radius: 24px;
+}
+.reveal .slides section.cover .cover-card .contact-row,
+.reveal .slides section.closing .closing-card .contact-row {
+  margin-top: auto;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+.reveal .slides section.closing .closing-card .closing-question {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+/* Navegación accesible: inicio, anterior, arriba, abajo, siguiente,
+   final, vista general y enlace al repositorio. */
+.deck-navigation {
+  position: fixed;
+  z-index: 130;
+  right: 22px;
+  bottom: 15px;
+  display: flex;
+  gap: 5px;
+  padding: 5px 7px;
+  align-items: center;
+  background: rgba(11,16,32,.93);
+  border: 1px solid #30435B;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+.deck-navigation button,
+.deck-navigation .deck-repo-link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  border-radius: 8px;
+  min-width: 37px;
+  height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  cursor: pointer;
+  font: 500 14px "Lexend",Arial,sans-serif;
+  text-decoration: none;
+  gap: 7px;
+  transition: background .15s ease, color .15s ease;
+}
+.deck-navigation button:hover:not(:disabled),
+.deck-navigation .deck-repo-link:hover,
+.deck-navigation button.is-active { background:#1D2A40; color:#A6F8E8; }
+.deck-navigation button:focus-visible,
+.deck-navigation a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.deck-navigation button:disabled { color:#49636E; opacity:.52; cursor:not-allowed; }
+.deck-navigation button i, .deck-navigation a i { font-size:18px; }
+.deck-navigation .deck-nav-divider { height:22px; width:1px; background:#30435B; margin:0 2px; }
+.deck-navigation .deck-repo-link { color:var(--heading); border:1px solid #30435B; margin-left:1px; }
+.deck-counter { bottom:24px; left:24px; }
+@media (max-width:780px) {
+  .deck-navigation { right:8px; bottom:10px; gap:0; padding:3px; }
+  .deck-navigation button, .deck-navigation .deck-repo-link { min-width:31px; height:34px; padding:0 5px; }
+  .deck-navigation button i, .deck-navigation a i {font-size:15px;}
+  .deck-navigation .deck-repo-link span { display:none; }
+  .deck-counter {left:10px;bottom:14px;}
+}
+@media print {
+  .deck-navigation, .deck-counter {display:none!important;}
+}
+
+/* v8: Unificar dimensión, espaciado, bordes y alineación del contador
+   y de la barra de controles. Únicamente estética; sin cambios de JS. */
+:root {
+  --deck-footer-bottom: 15px;
+  --deck-footer-height: 51px;
+  --deck-footer-background: rgba(11, 16, 32, .93);
+  --deck-footer-border: #30435B;
+  --deck-footer-radius: 12px;
+}
+.deck-navigation {
+  bottom: var(--deck-footer-bottom);
+  min-height: var(--deck-footer-height);
+  box-sizing: border-box;
+  background: var(--deck-footer-background);
+  border-color: var(--deck-footer-border);
+  border-radius: var(--deck-footer-radius);
+}
+.deck-counter {
+  left: 22px;
+  bottom: var(--deck-footer-bottom);
+  height: var(--deck-footer-height);
+  min-width: 94px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--deck-footer-background);
+  border: 1px solid var(--deck-footer-border);
+  border-radius: var(--deck-footer-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+  font: 500 14px "JetBrains Mono", Consolas, monospace;
+  line-height: 1;
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  :root {
+    --deck-footer-bottom: 10px;
+    --deck-footer-height: 42px;
+  }
+  .deck-counter {
+    left: 8px;
+    min-width: 76px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .deck-navigation { right: 6px; padding: 2px; }
+  .deck-navigation button,
+  .deck-navigation .deck-repo-link { min-width: 27px; padding: 0 4px; }
+  .deck-counter { left: 6px; min-width: 68px; padding: 0 7px; font-size: 11px; }
+}
+
+/* v1.1: user-editable theme tokens, loaded from presentation.config.json. */
+.reveal .slides .readme-only {display:none!important}
+[hidden] {display:none!important}
+.reveal .slides section.cover .cover-card,
+.reveal .slides section.closing .closing-card {
+  background:var(--bg);
+  border-color:var(--line);
+}
+.reveal .cover-title,.reveal section.cover .cover-title,
+.reveal .cover-author,.reveal .cover-kicker,
+.reveal h1,.reveal h2,.reveal h3 {
+  font-family:var(--r-heading-font);
+}
+.reveal,.reveal .cover-description,.reveal .cover-role,
+.reveal .contact-email,.reveal .social-handle,
+.reveal .contact-row,.reveal table,.reveal .diagram-panel svg text {
+  font-family:var(--r-main-font);
+}
+.reveal pre code,.reveal code,.deck-counter {
+  font-family:var(--r-code-font)!important;
+}
+.reveal .feature-card,
+.reveal .diagram-panel {border-color:var(--line)}
+.reveal .feature-card {background:var(--panel)}
+.reveal .deck-navigation,.deck-navigation,.deck-counter {
+  background:var(--bg);
+  border-color:var(--line);
+}
+.reveal .cover-separator {background:var(--line)}
+.reveal .contact-socials .social-icon i {color:var(--accent)}
+/* Protect the footer from competing slide content in narrow viewports. */
+.reveal .slide-content-compact table {font-size:.61em}
+.reveal .slide-content-compact img {max-height:290px}
+
+/* v1.2 — Both presets are fully themed. All slide surfaces follow the active
+   data-deck-theme; a light palette is not merely a light page background. */
+.reveal {
+  background:radial-gradient(ellipse at 88% 12%,var(--surface-glow) 0,transparent 46%),var(--bg);
+  color:var(--body);
+}
+.reveal .slides section.cover .cover-card,
+.reveal .slides section.closing .closing-card {
+  background:var(--bg);
+  border-color:var(--line);
+  box-shadow:0 20px 70px var(--shadow-tint);
+}
+.reveal .feature-card {
+  background:var(--panel);
+  border-color:var(--line);
+}
+.reveal .diagram-panel {
+  background:var(--diagram-bg);
+  border-color:var(--line);
+}
+.reveal blockquote {background:var(--panel);border-left-color:var(--accent)}
+.reveal table, .reveal table th, .reveal table td {border-color:var(--line)}
+.reveal table th {background:var(--panel-2);color:var(--accent)}
+.reveal table tr:nth-child(even) {background:var(--table-stripe)}
+.reveal pre code {
+  background:var(--code-bg);
+  color:var(--code-fg);
+  border-color:var(--line);
+}
+.reveal code:not(pre code) {background:var(--inline-code-bg);color:var(--inline-code-fg)}
+.reveal .contact-socials .social-icon:hover,
+.deck-navigation button:hover:not(:disabled),
+.deck-navigation .deck-repo-link:hover,
+.deck-navigation button.is-active {
+  background:var(--hover-bg);
+  color:var(--hover-fg);
+}
+.deck-navigation,.deck-counter {
+  color:var(--body);
+  background:var(--bg);
+  border-color:var(--line);
+  box-shadow:0 8px 20px var(--shadow-tint);
+}
+.deck-navigation button,.deck-navigation .deck-repo-link {color:var(--accent)}
+.deck-navigation .deck-repo-link {border-color:var(--line);color:var(--heading)}
+.deck-navigation .deck-nav-divider {background:var(--line)}
+.deck-navigation button:disabled {opacity:.30;color:var(--muted)}
+.deck-navigation #nav-theme {color:var(--accent)}
+.reveal .slides img {border-color:var(--line);box-shadow:0 12px 30px var(--shadow-tint)}
+/* Original dark theme imposes some fixed syntax colors; use the palette on
+   the code surface while retaining the language token highlights. */
+:root[data-deck-theme="light"] .reveal pre code {
+  background:var(--code-bg)!important;
+  color:var(--code-fg)!important;
+}
+:root[data-deck-theme="light"] .reveal .hljs {color:var(--code-fg)}
+:root[data-deck-theme="light"] .reveal .hljs-comment,
+:root[data-deck-theme="light"] .reveal .hljs-quote {color:#667085}
+:root[data-deck-theme="light"] .reveal .hljs-keyword,
+:root[data-deck-theme="light"] .reveal .hljs-selector-tag {color:#8754AE}
+:root[data-deck-theme="light"] .reveal .hljs-string,
+:root[data-deck-theme="light"] .reveal .hljs-title {color:#006F63}
+
+/* Video links in Markdown become players only inside the presentation.
+   The README continues to display the original readable URL links. */
+.reveal .slide-video {
+  margin:14px auto 6px;
+  width:min(900px,94%);
+  max-width:100%;
+  text-align:center;
+}
+.reveal .slide-video__frame {
+  aspect-ratio:16 / 9;
+  width:100%;
+  background:var(--media-bg);
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 12px 30px var(--shadow-tint);
+}
+.reveal .slide-video__frame iframe,
+.reveal .slide-video__frame video {
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+  border-radius:0;
+  background:#000;
+  object-fit:contain;
+}
+.reveal .slide-video figcaption {margin-top:6px;font-size:15px;color:var(--muted)}
+.reveal .slide-video figcaption a {color:var(--accent)}
+@media (max-width:780px) {
+  .reveal .slide-video {width:96%;margin:9px auto 4px}
+  .reveal .slide-video figcaption {font-size:12px}
+}
+@media (prefers-reduced-motion:reduce) {
+  .deck-navigation button {transition:none}
+}
+
+/* v1.3 — presentation-first controls: only the navigation toolbar fades.
+   The slide counter stays visible at its original fixed position. */
+.deck-navigation.nav-auto {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .20s ease, transform .20s ease;
+}
+.deck-navigation.nav-auto.is-visible,
+.deck-navigation.nav-auto:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/* On fine-pointer devices, proximity is sensed in JS without a visible handle. */
+.nav-reveal-trigger { display: none; }
+/* Touch devices cannot hover: leave a small, discoverable and accessible trigger.
+   When expanded, the full toolbar is placed ABOVE the permanent slide counter. */
+@media (hover: none), (pointer: coarse) {
+  .nav-reveal-trigger:not([hidden]) {
+    appearance: none;
+    display: inline-flex;
+    position: fixed;
+    z-index: 132;
+    right: 8px;
+    bottom: var(--deck-footer-bottom);
+    height: var(--deck-footer-height);
+    min-width: 48px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--deck-footer-radius);
+    background: var(--bg);
+    color: var(--accent);
+    box-shadow: 0 8px 20px var(--shadow-tint);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .nav-reveal-trigger[aria-expanded="true"] {
+    background: var(--hover-bg);
+    color: var(--hover-fg);
+  }
+  .deck-navigation.nav-auto {
+    bottom: calc(var(--deck-footer-bottom) + var(--deck-footer-height) + 10px);
+    right: 8px;
+    max-width: calc(100vw - 16px);
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+}
+.nav-reveal-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .deck-navigation.nav-auto {transition: none; transform: none;}
+}
+
+/* Extra room for finger-sized actions without hiding navigation options. */
+@media (max-width: 600px) and (hover: none), (max-width: 600px) and (pointer: coarse) {
+  .deck-navigation.nav-auto {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: min(360px, calc(100vw - 16px));
+    gap: 4px;
+    overflow: visible;
+    padding: 5px;
+  }
+  .deck-navigation.nav-auto button,
+  .deck-navigation.nav-auto .deck-repo-link {
+    min-width: 0;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  .deck-navigation.nav-auto .deck-nav-divider {display: none;}
+}
+
+
+/* v1.4 — slide-safe layout. Never hide overflowing instructional content. */
+:root { --deck-video-max-width: 640px; --deck-video-max-height: 350px; }
+.reveal .slide-video {
+  width: min(var(--deck-video-max-width), 92%);
+  max-width: 100%;
+  margin: 8px auto 4px;
+}
+.reveal .slide-video__frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: var(--deck-video-max-height);
+  margin: auto;
+}
+.reveal .slide-video figcaption { margin-top: 4px; font-size: 13px; }
+/* The JS fit pass only applies these to slides that exceed the virtual stage. */
+.reveal .slides section.slide-content-compact {
+  font-size: .93em;
+}
+.reveal .slides section.slide-content-compact p,
+.reveal .slides section.slide-content-compact li { line-height: 1.33; }
+.reveal .slides section.slide-content-compact h2 { margin-bottom: .30em; }
+.reveal .slides section.slide-content-compact table { font-size: .62em; }
+.reveal .slides section.slide-content-compact table th,
+.reveal .slides section.slide-content-compact table td { padding: 6px 11px; }
+.reveal .slides section.slide-content-compact pre code { max-height: 310px; }
+.reveal .slides section.slide-content-compact .diagram-panel { min-height: 205px; padding: 10px 12px; }
+.reveal .slides section.slide-content-compact .diagram-panel svg { max-height: 290px!important; }
+.reveal .slides section.slide-content-compact img { max-height: 260px; }
+.reveal .slides section.slide-content-compact .slide-video {
+  width: min(580px, 90%);
+}
+.reveal .slides section.slide-content-compact .slide-video__frame {max-height: 320px;}
+.reveal .slides section.slide-content-tight { font-size: .86em; }
+.reveal .slides section.slide-content-tight p,
+.reveal .slides section.slide-content-tight li { line-height: 1.25; margin: .25em 0; }
+.reveal .slides section.slide-content-tight h2 { margin-bottom: .20em; }
+.reveal .slides section.slide-content-tight table { font-size: .55em; }
+.reveal .slides section.slide-content-tight table th,
+.reveal .slides section.slide-content-tight table td { padding: 4px 9px; }
+.reveal .slides section.slide-content-tight .slide-video { width: min(525px, 88%); }
+.reveal .slides section.slide-content-tight .slide-video__frame { max-height: 295px; }
+.reveal .slides section.slide-content-tight .diagram-panel { min-height: 180px; padding: 8px 10px; }
+.reveal .slides section.slide-content-tight .diagram-panel svg { max-height: 265px!important; }
+.reveal .slides section.slide-content-tight img { max-height: 225px; }

@@ -1,0 +1,75 @@
+# This workflow is intentionally opt-in. Never pushes to main automatically.
+# Scheduled checks require repo Actions variable ENABLE_ENGINE_UPDATE_PRS=true;
+# running it manually via workflow_dispatch is also an explicit opt-in.
+name: Propose README to Slides engine update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '18 9 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  propose:
+    if: >-
+      github.repository != 'jorgektch/readme-to-slides' &&
+      (github.event_name == 'workflow_dispatch' || vars.ENABLE_ENGINE_UPDATE_PRS == 'true')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check release compatibility and verify SHA-256 files
+        id: update
+        run: |
+          python tools/update_engine.py --root . --report /tmp/readme-to-slides-upgrade.md --output "$GITHUB_OUTPUT"
+          cat /tmp/readme-to-slides-upgrade.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Validate updated engine before proposing it
+        if: steps.update.outputs.updated == 'true'
+        run: |
+          node --test tests/*.test.mjs
+          python tests/check_deck.py
+          python tests/test_quality_checker.py
+          python -m unittest discover -s tests -p 'test_engine_update.py'
+      - name: Open reviewable Pull Request (never push to main)
+        if: steps.update.outputs.updated == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NEW_VERSION: ${{ steps.update.outputs.version }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          BRANCH="rts/engine-v${NEW_VERSION}"
+          if [ "$(gh pr list --repo "$REPO" --state all --head "$BRANCH" --json number --jq 'length')" -gt 0 ]; then
+            echo "A PR already exists or was closed for ${NEW_VERSION}; inspect it before retrying." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            echo "The update branch already exists; inspect it before retrying." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config --local credential.helper '!gh auth git-credential'
+          git switch -c "$BRANCH"
+          # Restrict the commit to the known managed engine files + lock.
+          git add -- engine-release.json assets/js/app.mjs assets/js/config.mjs \
+            assets/js/fit.mjs assets/js/media.mjs assets/js/navigation.mjs \
+            assets/js/remote-assets.mjs assets/js/theme.mjs assets/theme.css
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(engine): propose README to Slides v${NEW_VERSION}"
+          git push --set-upstream origin "$BRANCH"
+          gh pr create --repo "$REPO" --base "$GITHUB_REF_NAME" --head "$BRANCH" \
+            --title "chore(engine): update README to Slides to v${NEW_VERSION}" \
+            --body-file /tmp/readme-to-slides-upgrade.md
